@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:wght@400;700&display=swap');
+@import url(//db.onlinewebfonts.com/c/4cbf858ccd9ffd3923bed6843a474080?family=Impact);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #E5E5E5;
+
+    body {
+        .container {
+            width: 550px;
+            margin: 0 auto;
+            background: #FFFFFF;
+
+            header {
+                display: flex;
+                align-items: center;
+                height: 65px;
+                background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+
+                .logo {
+                    margin-left: 20px;
+                    max-width: 31.31px;
+                }
+
+                .logo--name {
+                    margin-left: 7.19px;
+
+                    font-family: 'Karla';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20.7482px;
+                    line-height: 24px;
+                    letter-spacing: -0.1em;
+
+                    color: #FFFFFF;
+                }
+
+                .project-3 {
+                    margin-left: auto;
+                    margin-right: 37px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-align: right;
+
+                    color: #FFFFFF;
+                }
+            }
+
+            main {
+                padding: 36px;
+
+                .form {
+                    display: flex;
+                    flex-direction: column;
+
+                    .inputs {
+                        display: flex;
+                        justify-content: space-between;
+
+                        input {
+                            padding: 0px 11px;
+                            width: 208px;
+                            height: 35px;
+                            border: 1px solid #D5D4D8;
+                            border-radius: 5px;
+
+                            font-family: 'Karla';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 14px;
+
+                            color: #0D0D0D;
+                        }
+
+                        input:focus {
+                            outline: none;
+                        }
+
+                    }
+
+                    .create-btn {
+                        cursor: pointer;
+                        
+                        margin-top: 15px;
+
+                        width: 477px;
+                        height: 40px;
+                        background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+                        border-radius: 5px;
+
+                        outline: none;
+                        border: none;
+
+                        font-family: 'Karla';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: center;
+                        letter-spacing: -0.1em;
+
+                        color: #FFFFFF;
+                    }
+                }
+
+                .generated-meme {
+                    position: relative;
+                    margin-top: 36px;
+                    margin-bottom: 19px;
+
+                    .lower-txt--meme {
+                        left: 50%;
+                        transform: translate(-50%);
+                        width: 100%;
+                        font-family: 'Impact';
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 32px;
+                        line-height: 39px;
+                        position: absolute;
+                        text-align: center;
+                        top: 16px;
+
+                        text-shadow:
+                            -2px -2px 0 #000,
+                            2px -2px 0 #000,
+                            -2px 2px 0 #000,
+                            2px 2px 0 #000;
+
+                        color: #FFFFFF;
+                    }
+
+                    .upper-txt--meme {
+                        left: 50%;
+                        transform: translate(-50%);
+                        width: 100%;
+                        font-family: 'Impact';
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 32px;
+                        line-height: 39px;
+                        position: absolute;
+                        text-align: center;
+
+                        text-shadow:
+                            -2px -2px 0 #000,
+                            2px -2px 0 #000,
+                            -2px 2px 0 #000,
+                            2px 2px 0 #000;
+
+                        color: #FFFFFF;
+                        top: 213px;
+                    }
+                }
+            }
+        }
+    }
+}

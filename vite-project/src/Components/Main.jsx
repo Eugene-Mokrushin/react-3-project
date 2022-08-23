@@ -1,22 +1,38 @@
 import React from "react";
+import memesData from '../memesData.js'
 
 
 export default function Main() {
+    const [allMemeImages, setAllMemeImages] = React.useState(memesData.data.memes)
+    const [meme, setMeme] = React.useState(
+        {
+            imgMeme: "",
+            topText: "",
+            bottomText: ""
+        }
+    )
+
+    function getMemeImage() {
+        const memesArray = allMemeImages
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        setMeme(prevState => ({ ...prevState, imgMeme: memesArray[randomNumber].url }))
+
+    }
+
+
     return (
         <main>
-            <form action="" className="form">
+            <div className="form">
                 <div className="inputs">
-                    <input type="text" className="upper-text" placeholder="Top text"/>
-                    <input type="text" className="lower-text" placeholder="Bottom text"/>
+                    <input type="text" className="upper-text" placeholder="Top text" />
+                    <input type="text" className="lower-text" placeholder="Bottom text" />
                 </div>
-                <button type="submit" className="create-btn">
+                <button type="submit" className="create-btn" onClick={getMemeImage}>
                     Get a new meme image
                 </button>
-            </form>
+            </div>
             <div className="generated-meme">
-                <div className="lower-txt--meme">SHUT UP</div>
-                <div className="upper-txt--meme">AND TAKE MY MONEY</div>
-                <img src="/images/memeimg.jpg" alt="Meme image" className="meme--photo" />
+                {meme.imgMeme != "" && <img src={meme.imgMeme} alt="Meme image" className="meme--photo" />}
             </div>
         </main>
     )
